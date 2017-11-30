@@ -1,0 +1,42 @@
+#bg-video {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+}
+
+#bg-video video {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+}
+
+/*.opaque::before {*/
+    /*filter: blur(5px);*/
+/*}*/
+
+
+.opaque {
+    background-color: transparent;
+    z-index: 2;
+    position: relative;
+}
+
+.opaque::before {
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: -1;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(233, 236, 239, 0.7);
+}
